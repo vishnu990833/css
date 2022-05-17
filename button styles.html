@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="demo"></p>
+  <p id="dem"></p>
+  <p id="de"></p>
+  <p id="d"></p>
+  <p id="v"></p>
+  
+
+  <script>
+    let fruits = ["banana","apple","pineapple","mango","gova"]
+
+    document.getElementById("demo").innerHTML=fruits.push("vishnu");
+    document.getElementById("dem").innerHTML=fruits.join(" * ");
+    document.getElementById("de").innerHTML=fruits.pop();
+    document.getElementById("d").innerHTML=fruits.sort();
+    document.getElementById("v").innerHTML=fruits.reverse();
+
+
+
+
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .btn{
+      height:3rem;
+      width: 9rem;
+      left: 300px;
+      top: 200px;
+      border: 3px solid deepskyblue;
+      color: rgb(42, 15, 247);
+      font-weight: bold;
+      position: relative;
+      cursor: pointer;
+    }
+    .btn::before,
+    .btn::after{
+      content: '';
+      position:absolute;
+      width: 4px;
+      height: 4px;
+      border: inherit;
+      transition: 1s;
+
+    }
+    .btn::before{
+      left:-15px;
+      top:-15px;
+      border-width: 3px 0 0 3px;
+
+    }
+    .btn::after{
+      right:-15px;
+      bottom: -15px;
+      border-width: 0 3px 3px 0;
+
+    }
+    .btn:hover::after,
+    .btn:hover::before{
+      width:calc(100% + 27px);
+      height:calc(100% + 27px)
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn">vishnu</button>
+  
+</body>
+</html>
